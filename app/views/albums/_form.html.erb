@@ -1,0 +1,25 @@
+<%= error_messages_for(f.object) %>
+
+<table class="tableResult">
+  <tr>
+    <td>Active</td>
+    <td><%= f.check_box(:active) %></td>
+  </tr>
+
+  <tr>
+    <td>Band</td>
+    <td>
+      <% if f.object && f.object.errors.size > 0 %>
+        <% @bands = Band.sorted %>
+      <% end %>
+      <%= f.select(:band_id, @bands.map {|b| [b.name, b.id]}) %></td>
+  </tr>
+  <tr>
+    <td>Title</td>
+    <td><%= f.text_field(:title) %></td>
+  </tr>
+  <tr>
+    <td>Year</td>
+    <td><%= f.text_field(:year) %></td>
+  </tr>
+</table>

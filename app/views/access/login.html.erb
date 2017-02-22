@@ -1,0 +1,36 @@
+<% @page_title = "Admin Login" %>
+
+<%= form_tag(access_attempt_login_path, :method => :post) do %>
+<div class="loginPage">
+  <table>
+    <tr>
+      <td><% label_tag(:email) %> Email</td>
+      <td><%= text_field_tag(:email, params[:username]) %></td>
+    </tr>
+    <tr>
+      <td><% label_tag(:password) %> Password</td>
+      <td><%= password_field_tag(:password) %></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><%= submit_tag("Log In") %></td>
+    </tr>
+  </table>
+</div>
+<% end %>
+
+<div class="userHelper">
+  Click here to automatically set the login form values. <br>
+  <br>
+  username 'paquettedavid@me.com' <br>
+  password '123456' <br>
+  <br>
+  <a href="#" onclick="autoFillForm()">Click here to automativcally set the login form values.</a>
+</div>
+
+<script type="text/javascript">
+  function autoFillForm(){
+    document.getElementById('email').value = 'paquettedavid@me.com';
+    document.getElementById('password').value = '123456';
+  }
+</script>

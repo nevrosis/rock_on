@@ -1,0 +1,13 @@
+<h1>ADD a new Amin User</h1>
+
+<%= link_to("<< Back to Admin Users listing" , power_users_path , :class => '') %>
+<br>
+
+
+<%= form_for(@power_user) do |f| %>
+<br>
+<%= render(:partial => 'form', :locals => {:f => f}) %>
+<br>
+<%= f.submit("Add this Admin User") %>
+
+<% end %>

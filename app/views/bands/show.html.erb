@@ -1,0 +1,8 @@
+<h1>Bands Information</h1>
+
+<%= link_to("<< Back to bands listing" , bands_path , :class => 'Back to bands listing') %>
+<br>
+<%= @band.active ? 'active' : 'disabled' %>
+<%= @band.name %>
+<%= @band.albums.size %>
+<%= @band.website %>

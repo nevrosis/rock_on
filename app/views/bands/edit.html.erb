@@ -1,0 +1,13 @@
+<h1>EDIT</h1>
+
+<%= link_to("<< Back to bands listing" , bands_path , :class => 'Back to bands listing') %>
+<br>
+
+
+<%= form_for(@band) do |f| %>
+<br>
+<%= render(:partial => 'form', :locals => {:f => f}) %>
+<br>
+<%= f.submit("Update this band") %>
+
+<% end %>

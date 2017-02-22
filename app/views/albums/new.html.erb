@@ -1,0 +1,11 @@
+<h1>ADD a new Albums</h1>
+
+<%= link_to("<< Back to album listing" , albums_path , :class => 'Back to album listing') %>
+<br>
+<%= form_for(@album) do |f| %>
+<br>
+<%= render(:partial => 'form', :locals => {:f => f}) %>
+<br>
+<%= f.submit("Add this album") %>
+
+<% end %>

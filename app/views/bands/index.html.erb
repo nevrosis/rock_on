@@ -1,0 +1,30 @@
+<% @page_title = "Band Listing" %>
+<div id="pageTitle">
+  <h1><%= @page_title %></h1>
+</div>
+
+<%= link_to("Add new Band" , new_band_path , :class => 'New Band') %>
+
+<br>
+
+
+<table class="tableResult">
+  <tr>
+    <% if session[:user_id] %><th></th><% end %>
+    <th>Name</th>
+    <th>Albums</th>
+    <th>Website</th>
+    <% if session[:user_id] %><th>Details</th><% end %>
+    <% if session[:user_id] %><th>Edit</th><% end %>
+  </tr>
+  <% @bands.each do |band| %>
+  <tr>
+    <% if session[:user_id] %><td class="compact"><%= band.active ? 'active' : 'disabled' %></td><% end %>
+    <td><%= band.name %></td>
+    <td><%= band.albums.size %></td>
+    <td><%= band.website %></td>
+    <% if session[:user_id] %><td class="compact"><%= link_to("Details" , band_path(band)) %></td><% end %>
+    <% if session[:user_id] %><td class="compact"><%= link_to("Edit" , edit_band_path(band)) %></td><% end %>
+  </tr>
+  <% end %>
+</table>

@@ -1,0 +1,11 @@
+<h1>EDIT</h1>
+
+<%= link_to("<< Back to albums listing" , albums_path , :class => 'Back to albums listing') %>
+<br>
+<%= form_for(@album) do |f| %>
+<br>
+<%= render(:partial => 'form', :locals => {:f => f}) %>
+<br>
+<%= f.submit("Update this album") %>
+
+<% end %>

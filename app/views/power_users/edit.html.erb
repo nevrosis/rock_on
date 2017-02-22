@@ -1,0 +1,13 @@
+<h1>EDIT</h1>
+
+<%= link_to("<< Back to Adm,in Users listing" , power_users_path , :class => '') %>
+<br>
+
+
+<%= form_for(@power_user) do |f| %>
+<br>
+<%= render(:partial => 'form', :locals => {:f => f}) %>
+<br>
+<%= f.submit("Update this Admin User") %>
+
+<% end %>

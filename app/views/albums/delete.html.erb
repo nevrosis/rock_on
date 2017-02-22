@@ -1,0 +1,13 @@
+<h1>Albums delete confirmation</h1>
+
+<%= link_to("<< Back to album listing" , albums_path , :class => 'Back to album listing') %>
+<br>
+
+
+<%= form_for(@album, :method => 'delete') do |f| %>
+
+<%= @album.title %>
+<br>
+<%= f.submit("delete this album") %>
+
+<% end %>

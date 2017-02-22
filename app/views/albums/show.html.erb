@@ -1,0 +1,9 @@
+<h1>Album Information</h1>
+
+<%= link_to("<< Back to albums listing" , albums_path , :class => 'Back to albums listing') %>
+<br>
+
+<%= @album.active ? 'active' : 'disabled' %>
+<%= @album.title %>
+<%= @album.year %>
+<%= @album.band_id %>

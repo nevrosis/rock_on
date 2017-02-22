@@ -1,0 +1,2 @@
+module PowerUsersHelper
+end

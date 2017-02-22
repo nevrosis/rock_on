@@ -1,0 +1,30 @@
+<% @page_title = "Album Listing" %>
+
+<div id="pageTitle">
+  <h1><%= @page_title %></h1>
+</div>
+
+<%= link_to("Add new Album" , new_album_path , :class => 'New Album') %>
+<br>
+<table class="tableResult">
+  <tr>
+    <% if session[:user_id] %><th></th><% end %>
+    <th>Title</th>
+    <th>Year</th>
+    <th>Band</th>
+    <% if session[:user_id] %><th>Details</th><% end %>
+    <% if session[:user_id] %><th>Edit</th><% end %>
+    <% if session[:user_id] %><th>Delete</th><% end %>
+  </tr>
+  <% @albums.each do |album| %>
+  <tr>
+    <% if session[:user_id] %><td><%= album.active ? 'active' : 'disabled' %></td><% end %>
+    <td><%= album.title %></td>
+    <td><%= album.year %></td>
+    <td><%= album.band.name %></td>
+    <% if session[:user_id] %><td><%= link_to("Details" , album_path(album) , :class => 'Show') %></td><% end %>
+    <% if session[:user_id] %><td><%= link_to("Edit" , edit_album_path(album) , :class => 'Edit') %></td><% end %>
+    <% if session[:user_id] %><td><%= link_to("Delete" , delete_album_path(album) , :class => 'Delete') %></td><% end %>
+  </tr>
+  <% end %>
+</table>

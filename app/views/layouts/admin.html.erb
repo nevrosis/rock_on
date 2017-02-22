@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RockOn - <%= @page_title || "Administration"  %></title>
+      <%= csrf_meta_tags %>
+      <%= stylesheet_link_tag "admin", debug: true %>
+      <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+    </head>
+  <body>
+
+    <div id="headerHelper">
+      This sample website had been created using Ruby On Rails 5.0.1. <br>
+      <a href="#" target="_blank">The source code can be found here</a>
+
+    </div>
+
+    <div id="header">
+      <nav>
+        <%= link_to("Bands" , bands_path , :class => 'mainMenu') %> |
+        <%= link_to("Albums" , albums_path , :class => 'mainMenu') %> |
+        <%= link_to("Admin" , power_users_path , :class => 'mainMenu') %>
+        <% if session[:user_id] %>
+          <%= link_to("logout" , access_logout_path , :class => 'mainMenu') %>
+        <% end %>
+      </nav>
+    </div>
+
+    <% if !flash[:notice].blank? %>
+      <div class="flashNotice">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+
+    <div id="mainContainer">
+      <%= yield %>
+    </div>
+
+  </body>
+</html>

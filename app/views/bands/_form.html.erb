@@ -1,0 +1,16 @@
+<%= error_messages_for(f.object) %>
+
+<table class="tableResult">
+  <tr>
+    <td>Active</td>
+    <td><%= f.check_box(:active) %></td>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td><%= f.text_field(:name) %></td>
+  </tr>
+  <tr>
+    <td>Website</td>
+    <td><%= f.text_field(:website) %></td>
+  </tr>
+</table>

@@ -1,0 +1,218 @@
+$font-stack:    arial, sans-serif;
+$primary-color: #000;
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+  vertical-align:middle;
+}
+
+body {
+  font: 20px $font-stack;
+  color: $primary-color;
+  background-color: white;
+}
+
+.field_with_errors{
+  input{
+    border: 1px solid red;
+    background-color: orange;
+  }
+}
+
+input, select{
+  font-size: 14px;
+  font-family: $font-stack;
+  padding: 12px;
+  margin: 5px;
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid grey;
+}
+
+#header{
+  background-color: black;
+  padding: 20px;
+  font-size: 30px;
+
+  nav{
+
+
+    a{
+      padding:0 20px;
+      color:white;
+      text-decoration: none;
+      -webkit-transition: 0.2s;
+      transition: 0.2s;
+      float:left;
+    }
+  }
+
+  a:hover{
+    background-color: white;
+    color: black;
+  }
+
+  a:last-of-type{
+    float:right;
+  }
+
+}
+
+#pageTitle{
+  padding: 20px;
+  height: 80px;
+  font-size: 40px;
+  vertical-align:middle;
+}
+
+#mainContainer{
+  padding: 20px;
+}
+
+.flashNotice{
+  padding:20px;
+  color: yellow;
+  background-color: grey;
+  font-size: 20px;
+}
+
+.tableResult{
+  width: 100%;
+  background-color: white;
+  border-spacing: 1px;
+  border-collapse: separate;
+
+  th{
+    background: #111111;
+    color: #eeeeee;
+    padding: 10px;
+  }
+
+  a{
+    color:white;
+  }
+
+  a:hover{
+    color:black;
+  }
+
+  td{
+    background-color: #333333;
+    padding: 10px;
+    color: #eeeeee;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+
+  td:hover{
+    background-color: white;
+    color: black;
+
+    a{
+      color:black;
+    }
+
+  }
+
+  .compact{
+    width: 1px;
+  }
+
+}
+
+.formError{
+  margin : 0 auto;
+  width: 50%;
+  border: 2px solid red;
+  background-color: orange;
+  padding: 20px;
+
+}
+
+.loginPage{
+  padding: 50px;
+  color: black;
+}
+
+#headerHelper{
+  background-color: white;
+  color: black;
+  font-family: arial;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.userHelper{
+  font-family: arial;
+  font-size: 20px;
+  margin : 0 auto;
+  width: 50%;
+  border: 2px solid green;
+  background-color: lightgreen;
+  padding: 10px;
+}

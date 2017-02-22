@@ -1,0 +1,29 @@
+<% @page_title = "Admin User Listing" %>
+<div id="pageTitle">
+  <h1><%= @page_title %></h1>
+</div>
+
+<%= link_to("Add new Admin User" , new_power_user_path , :class => 'New Band') %>
+
+<br>
+
+
+<table class="tableResult">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Edit</th>
+  </tr>
+  <% @power_users.each do |power_user| %>
+  <tr>
+    <td><%= power_user.first_name %></td>
+    <td><%= power_user.last_name %></td>
+    <td><%= mail_to(power_user.email) %></td>
+    <td class="compact"><%= link_to("Edit" , edit_power_user_path(power_user)) %></td>
+  </tr>
+  <% end %>
+
+
+
+</table>
